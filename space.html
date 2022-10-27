@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wonorlost">
+        <div class="bg" id="bg2" >
+            
+            <div id="restart" align="center"><img class="lowertext" src="restart.PNG"></div>
+            <table align="center" id="ekdoteen"></table>
+            <div id="lower" align="center"><img class="lowertext" src="moves.png"><h1 id="moves"></h1></div>
+
+            <audio id="sound1"> <source src="sound3.ogg" type="audio/mpeg"> </audio>
+            <audio id="giftfound"> <source src="giftfound.mp3" type="audio/mpeg"> </audio>
+            <audio id="giftmissed"> <source src="giftmissed.mp3" type="audio/mpeg"> </audio>
+            <audio id="gamelose"> <source src="losingsound.mp3" type="audio/mpeg"> </audio>
+            <audio id="gamewin"> <source src="winningsound.mp3" type="audio/mpeg"> </audio>
+
+            <form>
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+        <div id="final" align="center">
+            <img id="yeimg" src="youwon.png" alt="">
+            <h1 id="h1">Score :</h1>
+            <div id="outernew">
+                <div class="re" id="re1">Restart</div>
+                <div class="re" id="re2">Start New</div>
+            </div>
+            
+        </div>
+    </div>
+    <style>
+        #outernew{
+            display:flex;
+            justify-content:space-around;
+        }
+
+        #final{
+            position: absolute;
+            
+            height: 250px;
+            width: 500px;
+            top:calc(50% - 100px);
+            left:calc(50% - 250px);
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 1px 1px 10px 10px white ;
+            
+        }
+        body, html {
+            height: 100%;
+            width:100%;
+            margin:0px;
+            align-items: center;
+            font-family: "Segoe UI",Arial,sans-serif;
+        }
+        #wonorlost{
+            height: 100%;
+            filter: blur(0px);
+        }
+        h1{
+            font-weight: 300;
+            
+        }
+        .re{
+            border-style: solid;
+            padding :10px 20px 10px 20px;
+            border-radius: 100px;
+        }
+        .re:hover{
+            background-color:rgba(127, 255, 212, 0.455);
+        }
+         
+        
+
+        #bg2 {
+    /* The image used */
+            background-image: url("tngbg2.png");
+            
+            
+
+  /* Full height */
+            height: 100%;
+
+  /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .lowertext {
+            width :200px;
+        }
+        #lower{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #restart:hover{
+            opacity: 50%;
+        }
+        
+    </style>
+    <script src="coding.js"></script>
+</body>
+</html>
