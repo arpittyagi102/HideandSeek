@@ -189,7 +189,7 @@
         }
         document.getElementById("re2").addEventListener("click",goback)
         function goback(){
-            window.location.href="mainmenu.html";
+            window.location.href="index.html";
         }
 
 
