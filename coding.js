@@ -91,7 +91,7 @@
             b=Math.floor(Math.random() * total) + 1;
             if(b==z||b==y||b==x){bombselect()}
         }
-        x=1;y=2;z=3;b=4
+        
         
         
         
