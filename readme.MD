@@ -1,8 +1,8 @@
 # Hide and Seek - Web Game
 
-![Hide and Seek Banner](game_banner.png)
+![Cover Page](media/coverpagedemo.png)
 
-Welcome to Hide and Seek, a web game built using vanilla JavaScript. The game involves finding hidden objects within a given time limit. Challenge yourself and test your observation skills!
+Welcome to Hide and Seek, a web game built using vanilla JavaScript. In this game you are challenged to find hidden gifts and avoid the dangerous bomb. Test your luck and play this simple and fun game.
 
 ## Features
 
@@ -13,9 +13,67 @@ Welcome to Hide and Seek, a web game built using vanilla JavaScript. The game in
 - Interactive game interface with visual feedback
 - Responsive design, suitable for different screen sizes
 
+## Game levels
+
+The game contains three levels :-
+
+<table>
+    <tr>
+        <td>Game levels</td>
+        <td>Boxes</td>
+        <td>Gifts</td>
+        <td>Bomb</td>
+    </tr>
+    <tr>
+        <td>Easy</td>
+        <td>9</td>
+        <td>3</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Normal</td>
+        <td>16</td>
+        <td>3</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Hard</td>
+        <td>25</td>
+        <td>3</td>
+        <td>1</td>
+    </tr>
+</table>
+
+## Cheese Theme 🧀
+
+In this theme you will be shown lot a cheese pieces and you have to find hidden Jerry behind them
+
+<img src="media/cheese2.png" height="100">
+<img src="media/jerry.png" height="100">
+
+## The Wedding Ring Theme 💍
+
+In this theme the boxes are the wedding ring boxes you have to find the boxes which have rings in them
+
+<img src="media/closed.png" height="100">
+<img src="media/open.png" height="100">
+
+Theme idea credits : [Sindhura Pogarthi](https://github.com/SindhuraPogarthi)
+
+## The Piggybank Theme 🐷
+
+In this theme you will have to break the piggybanks and find out which of them have coins, beware the bomb
+
+<img src="media/piggybank.png" height="100">
+<img src="media/coins.png" height="100">
+
 ## Demo
 
 Include a link to a live demo of the game, or provide screenshots showcasing the gameplay and interface.
+
+```bash
+https://www.hideandseekk.vercel.app
+```
 
 ## Installation
 
@@ -32,12 +90,8 @@ git clone https://github.com/your-username/hide-and-seek-game.git
 1. Open the `index.html` file in a web browser.
 2. Customize the game difficulty and theme settings.
 3. Click on the "Play" button to start the game.
-4. Find and click on the hidden objects within the time limit.
+4. Click and find on the hidden gifts with best score possible.
 5. Enjoy the game and try to achieve a high score!
-
-## Game Screenshots
-
-Include a few attractive screenshots of the game to give users a visual preview.
 
 ## Contributing
 
@@ -51,4 +105,4 @@ Contributions are welcome! If you'd like to contribute to the game, follow these
 
 ## Contact
 
-For any inquiries or feedback, feel free to reach out to [Your Name](mailto:your-email@example.com).
+For any inquiries or feedback, feel free to reach out to [Arpit Tyagi](https://www.linkedin.com/in/arpittyagirocks/).
