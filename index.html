@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hide and Seek</title>
-    <link rel="icon" type="image/x-icon" href="media/logo.png">
+    <link rel="icon" type="image/x-icon" href="media/logo.webp">
 </head>
 <body>
-    <img src="media/title.png" id="title" alt=""></img>
-    <a><div id="play" class="lowerbuttons"><img src="media/play.png" class="menubtnimages" alt="not working"></div></a>
-    <a><div id="diff" class="lowerbuttons"><img src="media/left.png" id="l1" class="small"></img><img src="media/easy.png" id="i1" class="menubtnimages"></img><img src="media/right.png" id="r1" class="small"></img></div></a>
-    <a><div id="theme" class="lowerbuttons"><img src="media/left.png" id="l2" class="small"></img><img src="media/cheese.png" id="i2" class="menubtnimages"></img><img src="media/right.png" id="r2" class="small"></div></a>
+    <img src="media/title.webp" id="title" alt=""></img>
+    <a><div id="play" class="lowerbuttons"><img src="media/play.webp" class="menubtnimages" alt="not working"></div></a>
+    <a><div id="diff" class="lowerbuttons"><img src="media/left.webp" id="l1" class="small"></img><img src="media/easy.webp" id="i1" class="menubtnimages"></img><img src="media/right.webp" id="r1" class="small"></img></div></a>
+    <a><div id="theme" class="lowerbuttons"><img src="media/left.webp" id="l2" class="small"></img><img src="media/cheese.webp" id="i2" class="menubtnimages"></img><img src="media/right.webp" id="r2" class="small"></div></a>
     <style>
         body, html {
             height: 100%; 
@@ -20,7 +20,7 @@
             align-items: center;
         }
         body{
-            background-image: url("media/earthfromspace.png");
+            background-image: url("media/earthfromspace.webp");
 
             
 
@@ -41,7 +41,7 @@
         }
         #play{
             top:calc(50% - 20px);
-            background-image: url("media/tngbg2.png");
+            background-image: url("media/tngbg2.webp");
             background-position: center;
             background-repeat: no-repeat;
             background-size:cover;
@@ -107,8 +107,8 @@
         }   
         
 
-        var arrofi1=["media/easy.png","media/normal.png","media/hard.png"]
-        var arrofi2=["media/cheese.png","media/rings.png","media/bank.png"]
+        var arrofi1=["media/easy.webp","media/normal.webp","media/hard.webp"]
+        var arrofi2=["media/cheese.webp","media/rings.webp","media/bank.webp"]
         
         console.log("0");
         document.getElementById("l1").addEventListener("click",l1);
@@ -161,13 +161,13 @@
         }
         function cpbb(){
             if(dusra==1){
-                document.getElementById("play").style.backgroundImage="url(\"media/tngbg2.png\")"
+                document.getElementById("play").style.backgroundImage="url(\"media/tngbg2.webp\")"
             }
             else if(dusra==2){
-                document.getElementById("play").style.backgroundImage="url(\"media/ringsbg.png\")"
+                document.getElementById("play").style.backgroundImage="url(\"media/ringsbg.webp\")"
             }
             else if(dusra==3){
-                document.getElementById("play").style.backgroundImage="url(\"media/piggybankbg.png\")"
+                document.getElementById("play").style.backgroundImage="url(\"media/piggybankbg.webp\")"
             }
         }
        
