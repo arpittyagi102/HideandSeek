@@ -186,6 +186,19 @@
             }
         }
  
+        function preloadImages(imageUrls) {
+            imageUrls.forEach(function (url) {
+                var img = new Image();
+                img.src = url;
+            });
+        }
+
+        var imageUrls = [
+            'earthfromspace.webp'
+        ];
+
+        // Preload the images
+        preloadImages(imageUrls);
 
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

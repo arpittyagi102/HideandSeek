@@ -105,12 +105,10 @@
         
     </style>
     <script>
-// Function to fetch all .webp image files in the 'media' directory
-function fetchWebpImageUrls() {
-  var imageDirectory = 'media/'; // Path to the 'media' directory
-  var imageUrls = [];
 
-  // Fetch all image files using XMLHttpRequest
+function fetchWebpImageUrls() {
+  var imageDirectory = 'media/'; 
+  var imageUrls = [];
   var xhr = new XMLHttpRequest();
   xhr.open('GET', imageDirectory, false);
   xhr.send(null);
@@ -118,7 +116,6 @@ function fetchWebpImageUrls() {
   if (xhr.status === 200) {
     var fileList = xhr.responseText.split('\n');
 
-    // Filter only .webp image files
     fileList.forEach(function (file) {
       if (file.match(/\.webp$/i)) {
         imageUrls.push(imageDirectory + file);
