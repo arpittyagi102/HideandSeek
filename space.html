@@ -104,6 +104,27 @@
         }
         
     </style>
+    <script>
+               function preloadImages(imageUrls) {
+            imageUrls.forEach(function (url) {
+                var img = new Image();
+                img.src = url;
+            });
+        }
+
+        var imageUrls = [
+            'media/empty.webp',
+            'media/bomb2.webp',
+            'media/coins.webp',
+            'media/jerry.webp',
+            'media/open.webp'
+        ];
+
+        // Preload the images
+        preloadImages(imageUrls);
+
+
+    </script>
     <script src="coding.js"></script>
 </body>
 </html>
