@@ -105,23 +105,33 @@
         
     </style>
     <script>
-               function preloadImages(imageUrls) {
-            imageUrls.forEach(function (url) {
-                var img = new Image();
-                img.src = url;
-            });
-        }
+// Function to fetch all .webp image files in the 'media' directory
+function fetchWebpImageUrls() {
+  var imageDirectory = 'media/'; // Path to the 'media' directory
+  var imageUrls = [];
 
-        var imageUrls = [
-            'media/empty.webp',
-            'media/bomb2.webp',
-            'media/coins.webp',
-            'media/jerry.webp',
-            'media/open.webp'
-        ];
+  // Fetch all image files using XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', imageDirectory, false);
+  xhr.send(null);
 
-        // Preload the images
-        preloadImages(imageUrls);
+  if (xhr.status === 200) {
+    var fileList = xhr.responseText.split('\n');
+
+    // Filter only .webp image files
+    fileList.forEach(function (file) {
+      if (file.match(/\.webp$/i)) {
+        imageUrls.push(imageDirectory + file);
+      }
+    });
+  }
+
+  return imageUrls;
+}
+
+// Preload all .webp images from the 'media' directory
+var imageUrls = fetchWebpImageUrls();
+preloadImages(imageUrls);
 
 
     </script>
