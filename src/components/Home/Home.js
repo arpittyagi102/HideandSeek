@@ -68,6 +68,9 @@ const Home = () => {
       1000
     );
   
+    setTimeout(() => {
+      navigate('/play'); // Navigate to the '/play' route after the animation
+    }, 1000);
   
     console.log('phla =', phla);
     console.log('dusra =', dusra);
