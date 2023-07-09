@@ -10,10 +10,10 @@
 <body>
     <div id="wonorlost">
         <div class="bg" id="bg2" >
-            
             <div id="restart" align="center"><img class="lowertext" src="media/restart.webp"></div>
             <table align="center" id="ekdoteen"></table>
             <div id="lower" align="center"><img class="lowertext" src="media/moves.webp"><h1 id="moves"></h1></div>
+            <a id="go-home" class="go-home" href="/"><span>Return Home</span></a>
 
             <audio id="sound1"> <source src="media/sound3.ogg" type="audio/mpeg"> </audio>
             <audio id="giftfound"> <source src="media/giftfound.mp3" type="audio/mpeg"> </audio>
@@ -102,6 +102,27 @@
         #restart:hover{
             opacity: 50%;
         }
+
+    .go-home{
+        text-decoration: none;
+        font-weight: bold;
+        margin-inline: auto;
+        display: block;
+        width: fit-content;
+        color: white;
+    }
+    
+    .go-home span{
+        background-color: black;
+        border-radius: 10px;
+        display: block;
+        padding: 20px;
+        transition: rotate 0.1s ease-out;
+    }
+
+    .go-home:hover span{
+        rotate: -10deg;
+    }
         
     </style>
     <script>
