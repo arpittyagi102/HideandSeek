@@ -6,9 +6,19 @@ html {
   align-items: center;
 }
 
-body {
+.bg {
   background-image: url("../../media/earthfromspace.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }
+
+
+
+/* body {
+  background-image: url("../../media/earthfromspace.webp");
+} */
 
 .lowerbuttons {
   width: 300px;

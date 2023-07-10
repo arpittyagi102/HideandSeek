@@ -38,20 +38,25 @@ h1{
 .re:hover{
     background-color:rgba(127, 255, 212, 0.455);
 }
+ 
+.bg.loading {
+    background-color: #fff; /* Use a neutral background color while loading */
+  }
 
 #bg2 {
-    /* The image used */
-    background-image: url("../../media/tngbg2.webp");
-  
-    /* Full height and width */
-    width: 100vw;
-    height: 100vh;
-  
-    /* Center and scale the image nicely */
+/* The image used */
+    /* background-image: url("../../media/tngbg2.webp"); */
+    
+    
+
+/* Full height */
+height: 100vh;
+
+/* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
 .lowertext {
     width :200px;

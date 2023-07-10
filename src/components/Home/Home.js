@@ -15,25 +15,35 @@ import bankbg from '../../media/piggybankbg.png'
 import ringsbg from '../../media/ringsbg.png';
 import cheesebg from '../../media/tngbg2.png';
 
+// From here there was change in the easy , hard , normal
+
 const Home = () => {
   const [phla, setPhla] = useState(1);
   const [dusra, setDusra] = useState(1);
+  const [movecount, setMovecount] = useState(0);
+  const [phlanum, setPhlanum] = useState(0);
+  const [level, setLevel] = useState(4);
+
   const navigate = useNavigate();
 
-  useEffect(() => {
-    preloadImages(['media/earthfromspace.webp','media/tngbg2.png']);
-  }, []);
+  // useEffect(() => {
+  //   preloadImages(['media/earthfromspace.webp','media/tngbg2.png']);
+  // }, []);
 
   
 
-  const preloadImages = (imageUrls) => {
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-    });
-  };
+  // const preloadImages = (imageUrls) => {
+  //   imageUrls.forEach((url) => {
+  //     const img = new Image();
+  //     img.src = url;
+  //   });
+  // };
 
   const loadit = () => {
+
+    setMovecount(0);
+    setPhlanum(level);
+
     const diffElement = document.getElementById('diff');
     const themeElement = document.getElementById('theme');
     const menubtnimagesarr = document.getElementsByClassName('menubtnimages');
@@ -41,6 +51,8 @@ const Home = () => {
     // Hide the difficulty and theme buttons
     diffElement.style.display = 'none';
     themeElement.style.display = 'none';
+
+ 
     
     // Hide all the arrow buttons
     for (let a = 0; a < menubtnimagesarr.length; a++) {
@@ -49,10 +61,11 @@ const Home = () => {
   
     const playElement = document.getElementById('play');
   
+    const selectedDifficulty = phla;
     const selectedTheme = dusra; // Get the selected theme
-    
   
     // Store the selected theme in localStorage
+    localStorage.setItem('selectedDifficulty', selectedDifficulty);
     localStorage.setItem('selectedTheme', selectedTheme);
   
     // Animate the play element
@@ -68,30 +81,36 @@ const Home = () => {
       1000
     );
   
+      
     setTimeout(() => {
-      navigate('/play'); // Navigate to the '/play' route after the animation
+      navigate(`/play?difficulty=${selectedDifficulty}&theme=${selectedTheme}`); // Navigate to the '/play' route after the animation
     }, 1000);
   
     console.log('phla =', phla);
     console.log('dusra =', dusra);
   };
+  
+
   const handleL1Click = () => {
     if (phla === 1) {
+      setPhla(2);
+    } else if (phla === 2) {
       setPhla(3);
-    } else if (phla === 2 || phla === 3) {
-      setPhla(phla - 1);
-    }
-  };
-
-  const handleR1Click = () => {
-    if (phla === 3) {
+    } else if (phla === 3) {
       setPhla(1);
-      document.getElementById('i1').src = arrofi1[phla - 1];
-    } else if (phla === 1 || phla === 2) {
-      setPhla(phla + 1);
-      document.getElementById('i1').src = arrofi1[phla - 1];
     }
   };
+  
+  const handleR1Click = () => {
+    if (phla === 1) {
+      setPhla(3);
+    } else if (phla === 2) {
+      setPhla(1);
+    } else if (phla === 3) {
+      setPhla(2);
+    }
+  };
+  
 
   const handleL2Click = () => {
     if (dusra === 1) {
@@ -124,11 +143,11 @@ const Home = () => {
     }
   };
 
-  const arrofi1 = [easyImage, hardImage ,normalImage];
+  const arrofi1 = [easyImage, normalImage, hardImage];
   const arrofi2 = [cheeseImage, ringsImage, bankImage];
 
   return (
-    <div>
+    <div className="bg">
       <img src={titleImage} id="title" alt="" />
       <div id="play" className="lowerbuttons" onClick={loadit}>
         <img src={playImage} className="menubtnimages" alt="not working" />
