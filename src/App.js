@@ -5,7 +5,7 @@ import Game from './components/Game/Game';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/hide-and-seek">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/play" element={<Game />} />
