@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Seek</title>
+    <link rel="icon" type="image/x-icon" href="media/logo.webp">
+</head>
+
+<body>
+    <div id="wonorlost">
+        <div class="bg" id="bg2">
+            <div id="restart" align="center"><img class="lowertext" src="media/restart.webp"></div>
+            <table align="center" id="ekdoteen"></table>
+            <div id="lower" align="center"><img class="lowertext" src="media/moves.webp">
+                <h1 id="moves"></h1>
+            </div>
+            <a id="go-home" class="go-home" href="/"><span>Return Home</span></a>
+            
+            <audio id="sound1">
+                <source src="media/sound3.ogg" type="audio/mpeg">
+            </audio>
+            <audio id="giftfound">
+                <source src="media/giftfound.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="giftmissed">
+                <source src="media/giftmissed.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="gamelose">
+                <source src="media/losingsound.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="gamewin">
+                <source src="media/winningsound.mp3" type="audio/mpeg">
+            </audio>
+            
+        </div>
+        <div id="final" align="center">
+            <img id="yeimg" src="media/youwon.webp" alt="">
+            <h1 id="h1">Score :</h1>
+            <div id="outernew">
+                <div class="re" id="re1">Restart</div>
+                <div class="re" id="re2">Start New</div>
+            </div>
+
+            <a id="go-home" class="go-home" href="/"><span>Return Home</span></a>
+        </div>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+        #outernew {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #final {
+            position: absolute;
+            height: 250px;
+            width: 500px;
+            top: calc(50% - 100px);
+            left: calc(50% - 250px);
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 1px 1px 10px 10px white;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            align-items: center;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        #wonorlost {
+            height: 100%;
+            filter: blur(0px);
+        }
+
+        h1 {
+            font-weight: 300;
+        }
+
+        .re {
+            border-style: solid;
+            padding: 10px 20px 10px 20px;
+            border-radius: 100px;
+        }
+
+        .re:hover {
+            background-color: rgba(127, 255, 212, 0.455);
+        }
+
+        #bg2 {
+            /* The image used */
+            background-image: url("media/tngbg2.webp");
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .lowertext {
+            width: 200px;
+        }
+
+        #lower {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #restart:hover {
+            opacity: 50%;
+        }
+
+        .go-home {
+            text-decoration: none;
+            font-weight: bold;
+            margin-inline: auto;
+            display: block;
+            width: fit-content;
+            color: black;
+        }
+
+        .go-home span {
+            font-family: 'Rock Salt', cursive;;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .go-home:hover span {
+            rotate: -10deg;
+        }
+    </style>
+    <script>
+
+        function fetchWebpImageUrls() {
+            var imageDirectory = 'media/';
+            var imageUrls = [];
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', imageDirectory, false);
+            xhr.send(null);
+
+            if (xhr.status === 200) {
+                var fileList = xhr.responseText.split('\n');
+
+                fileList.forEach(function (file) {
+                    if (file.match(/\.webp$/i)) {
+                        imageUrls.push(imageDirectory + file);
+                    }
+                });
+            }
+
+            return imageUrls;
+        }
+
+        // Preload all .webp images from the 'media' directory
+        var imageUrls = fetchWebpImageUrls();
+        preloadImages(imageUrls);
+
+
+    </script>
+    <script src="coding.js"></script>
+</body>
+
+</html>
