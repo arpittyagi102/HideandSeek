@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import 'tachyons';
 import './Home.css';
 import titleImage from '../../media/title.webp';
 import playImage from '../../media/play.webp';
@@ -14,35 +15,15 @@ import bankImage from '../../media/bank.webp';
 import bankbg from '../../media/piggybankbg.png'
 import ringsbg from '../../media/ringsbg.png';
 import cheesebg from '../../media/tngbg2.png';
-
-// From here there was change in the easy , hard , normal
+import bgImage from "../../media/earthfromspace.webp";
 
 const Home = () => {
   const [phla, setPhla] = useState(1);
   const [dusra, setDusra] = useState(1);
-  const [movecount, setMovecount] = useState(0);
-  const [phlanum, setPhlanum] = useState(0);
-  const [level, setLevel] = useState(4);
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   preloadImages(['media/earthfromspace.webp','media/tngbg2.png']);
-  // }, []);
-
-  
-
-  // const preloadImages = (imageUrls) => {
-  //   imageUrls.forEach((url) => {
-  //     const img = new Image();
-  //     img.src = url;
-  //   });
-  // };
-
   const loadit = () => {
-
-    setMovecount(0);
-    setPhlanum(level);
 
     const diffElement = document.getElementById('diff');
     const themeElement = document.getElementById('theme');
@@ -52,13 +33,11 @@ const Home = () => {
     diffElement.style.display = 'none';
     themeElement.style.display = 'none';
 
- 
-    
     // Hide all the arrow buttons
     for (let a = 0; a < menubtnimagesarr.length; a++) {
       menubtnimagesarr[a].style.display = 'none';
     }
-  
+
     const playElement = document.getElementById('play');
   
     const selectedDifficulty = phla;
@@ -85,9 +64,7 @@ const Home = () => {
     setTimeout(() => {
       navigate(`/play?difficulty=${selectedDifficulty}&theme=${selectedTheme}`); // Navigate to the '/play' route after the animation
     }, 1000);
-  
-    console.log('phla =', phla);
-    console.log('dusra =', dusra);
+    
   };
   
 
@@ -147,9 +124,9 @@ const Home = () => {
   const arrofi2 = [cheeseImage, ringsImage, bankImage];
 
   return (
-    <div className="bg">
+    <div className="bg bg-center cover min-vh-100 min-vw-100" style={{ backgroundImage: `url(${bgImage})` }}>
       <img src={titleImage} id="title" alt="" />
-      <div id="play" className="lowerbuttons" onClick={loadit}>
+      <div id="play" className="lowerbuttons" onClick={loadit} style={{ backgroundImage: `url(${cheesebg})` }} >
         <img src={playImage} className="menubtnimages" alt="not working" />
       </div>
       <div id="diff" className="lowerbuttons" onClick={handleL1Click}>

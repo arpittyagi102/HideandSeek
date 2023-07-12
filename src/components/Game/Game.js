@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import "./Game.css";
+import "../Home/Home.css";
 import cheeseImage from "../../media/cheese2.png";
 import piggyBankImage from "../../media/piggybank.png";
 import bombImage from "../../media/bomb2.png";
@@ -13,6 +13,7 @@ import closedImage from "../../media/closed.png";
 import restartImage from "../../media/restart.webp";
 import movesImage from "../../media/moves.webp";
 import winningImage1 from "../../media/youwon.webp";
+import losingImage1 from "../../media/youlost.png";
 import bgImage1 from "../../media/tngbg2.webp";
 import bgImage2 from "../../media/ringsbg.webp";
 import bgImage3 from "../../media/piggybankbg.webp";
@@ -111,7 +112,7 @@ import gameWinAudio from "../../media/winningsound.mp3";
     //for creating loop in table and fitting image and sound in them
     const generateTable = () => {
       const table = [];
-      console.log([phlanum])
+      console.log([phlanum]);
       for (let t = 0; t < phlanum; t++) {
         const row = [];
         for (let i = 0; i < phlanum; i++) {
@@ -141,8 +142,9 @@ import gameWinAudio from "../../media/winningsound.mp3";
         }
         table.push(<tr key={t}>{row}</tr>);
       }
-      return table;
+      return <tbody>{table}</tbody>;
     };
+    
 
     //opacity chaning functions
     const opchange = (e) => {
@@ -238,7 +240,7 @@ import gameWinAudio from "../../media/winningsound.mp3";
         document.getElementById("final").style.display = "block";
         document.getElementById("bg2").style.filter = "blur(8px)";
         document.getElementById("bg2").style.opacity = "o.7";
-        document.getElementById("yeimg").src = "youwon.png";
+        document.getElementById("yeimg").src = winningImage1;
       } catch (error) {
         console.error("An error occurred during winning logic:", error);
       }
@@ -249,7 +251,7 @@ import gameWinAudio from "../../media/winningsound.mp3";
         document.getElementById("final").style.display = "block";
         document.getElementById("bg2").style.filter = "blur(8px)";
         document.getElementById("bg2").style.opacity = "o.7";
-        document.getElementById("yeimg").src = "youwon.png";
+        document.getElementById("yeimg").src = losingImage1;
       } catch (error) {
         console.error("An error occurred during losing logic:", error);
       }
