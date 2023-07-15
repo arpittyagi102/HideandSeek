@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+.outernew {
+    display: flex;
+    justify-content: space-around;
+}
+
+.final {
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+body,
+html {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    font-family: "Fuzzy Bubbles", Arial, sans-serif;
+}
+
+
+main {
+    height: 100%;
+    filter: blur(0px);
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.re {
+    padding: 10px 20px 10px 20px;
+    border-radius: 100px;
+    border-style: solid;
+}
+
+.re:hover {
+    background-color: rgba(127, 255, 212, 0.455);
+}
+
+.bg2 {
+    overflow: auto;
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+
+    /* The image used */
+    background-image: url("media/tngbg2.webp");
+    background-repeat: no-repeat;
+}
+
+.lowertext {
+    width: 200px;
+}
+
+.lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.go-home {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    margin-inline: auto;
+}
+
+.text-style {
+    border: none;
+    color: black;
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: .5px .5px white, -.5px -.5px white, .5px -.5px white, -.5px .5px white;
+    background-color: transparent;
+}
+
+.text-style-turn {
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: none;
+    background-color: black;
+    cursor: pointer;
+    margin-inline: auto;
+    margin-block: 15px;
+}
+
+.text-style-turn:hover {
+    rotate: -10deg;
+}
+
+.text-style-big {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-style-big2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.table {
+    max-width: 100%;
+    padding-top: 20px;
+    margin-inline: auto;
+}
+
+.images {
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 1/1;
+    opacity: 75%;
+}
+
+.images.post-click {
+    opacity: 100%;
+}
+
+.images:hover {
+    opacity: 100%;
+}
