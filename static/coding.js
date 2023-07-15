@@ -7,6 +7,7 @@ var levelInt = parseInt(level) + 2;
 var themeInt = parseInt(theme);
 var total = levelInt * levelInt;
 var clickSlots = document.getElementsByClassName("images");
+var clickedSlots = [];
 
 
 function findOpenSpot() {
@@ -17,7 +18,6 @@ function findOpenSpot() {
     }
     return spot;
 }
-
 
 function clicked() {
     moveCount++;
@@ -43,6 +43,8 @@ function clicked() {
         giftmissed(this.id);
         score -= 100;
     }
+
+    this.removeEventListener("click", clicked);
 }
 
 //for changing the image after clicked
@@ -82,7 +84,7 @@ function sound() {
 
 function endGame(win) {
     if (!win) {
-        document.getElementById("win-loose-text").textContent = "You Win!";
+        document.getElementById("win-loose-text").textContent = "You Lost!";
         document.getElementById("gamelose").play();
     } else {
         document.getElementById("gamewin").play();
