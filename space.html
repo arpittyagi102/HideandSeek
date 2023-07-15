@@ -8,14 +8,17 @@
 
     <title>Hide and Seek</title>
 
-    <link rel="icon" type="image/x-icon" href="media/logo.webp">
+    <link rel="icon" type="image/x-icon" href="/media/logo.webp">
     <link rel="stylesheet" href="static/space.css">
 
-    <script src="static/coding.js"></script>
-    <script src="static/space.js"></script>
+    <script src="/static/coding.js"></script>
+    <script src="/static/space.js"></script>
 </head>
 
 <body>
+    <div class="play-screen">
+        <button class="play-btn text-style text-style-turn" onclick="this.parentNode.remove()">Play</button>
+    </div>
     <main>
         <div class="bg bg2" id="bg2">
             <table class="table" id="table"></table>
@@ -27,19 +30,19 @@
             <a id="go-home" class="go-home text-style text-style-turn" href="/">Return Home</a>
 
             <audio id="sound1">
-                <source src="media/sound3.ogg" type="audio/mpeg">
+                <source src="/media/sound3.ogg" type="audio/mpeg">
             </audio>
             <audio id="giftfound">
-                <source src="media/giftfound.mp3" type="audio/mpeg">
+                <source src="/media/giftfound.mp3" type="audio/mpeg">
             </audio>
             <audio id="giftmissed">
-                <source src="media/giftmissed.mp3" type="audio/mpeg">
+                <source src="/media/giftmissed.mp3" type="audio/mpeg">
             </audio>
             <audio id="gamelose">
-                <source src="media/losingsound.mp3" type="audio/mpeg">
+                <source src="/media/losingsound.mp3" type="audio/mpeg">
             </audio>
             <audio id="gamewin">
-                <source src="media/winningsound.mp3" type="audio/mpeg">
+                <source src="/media/winningsound.mp3" type="audio/mpeg">
             </audio>
 
         </div>

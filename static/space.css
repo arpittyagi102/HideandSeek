@@ -5,6 +5,24 @@
     justify-content: space-around;
 }
 
+.play-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-screen .play-btn {
+    width: 10em;
+}
+
 .final {
     position: fixed;
     top: 0;
@@ -58,7 +76,7 @@ h1 {
     background-size: cover;
 
     /* The image used */
-    background-image: url("media/tngbg2.webp");
+    background-image: url("/media/tngbg2.webp");
     background-repeat: no-repeat;
 }
 
@@ -101,10 +119,26 @@ h1 {
     cursor: pointer;
     margin-inline: auto;
     margin-block: 15px;
+    position: relative;
 }
 
 .text-style-turn:hover {
-    rotate: -10deg;
+    transform: rotate(-10deg);
+}
+
+.text-style-turn:hover::after {
+    transform: rotate(10deg);
+}
+
+.text-style-turn::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: none;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
 }
 
 .text-style-big {

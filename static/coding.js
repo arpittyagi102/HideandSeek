@@ -160,10 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
     gift2_IDX = findOpenSpot();
     gift3_IDX = findOpenSpot();
     bomb_IDX = findOpenSpot();
-    console.log(gift1_IDX);
-    console.log(gift2_IDX);
-    console.log(gift3_IDX);
-    console.log(bomb_IDX);
 
     document.getElementById("final").style.display = "none";
 });
