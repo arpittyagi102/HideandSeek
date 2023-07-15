@@ -7,7 +7,6 @@ var levelInt = parseInt(level) + 2;
 var themeInt = parseInt(theme);
 var total = levelInt * levelInt;
 var clickSlots = document.getElementsByClassName("images");
-var clickedSlots = [];
 
 
 function findOpenSpot() {
